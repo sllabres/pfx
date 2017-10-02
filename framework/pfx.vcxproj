@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug (Allegro)|Win32">
+      <Configuration>Debug (Allegro)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Allegro)|Win32">
+      <Configuration>Release (Allegro)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio\audiocontroller.h" />
+    <ClInclude Include="audio\soundfx.h" />
+    <ClInclude Include="core\colour.h" />
+    <ClInclude Include="core\colourhsl.h" />
+    <ClInclude Include="core\configfile.h" />
+    <ClInclude Include="core\easing.h" />
+    <ClInclude Include="core\endian.h" />
+    <ClInclude Include="core\idtag.h" />
+    <ClInclude Include="core\list.h" />
+    <ClInclude Include="core\maths.h" />
+    <ClInclude Include="core\memory.h" />
+    <ClInclude Include="core\memorystream.h" />
+    <ClInclude Include="core\pingpong.h" />
+    <ClInclude Include="core\serialiser.h" />
+    <ClInclude Include="events\event.h" />
+    <ClInclude Include="events\eventcontroller.h" />
+    <ClInclude Include="filesys\filesystem.h" />
+    <ClInclude Include="filesys\tinydir.h" />
+    <ClInclude Include="input\inputcontroller.h" />
+    <ClInclude Include="input\joypad.h" />
+    <ClInclude Include="input\keyboard.h" />
+    <ClInclude Include="input\keycodes\allegro.h" />
+    <ClInclude Include="input\keycodes\pfxkeys.h" />
+    <ClInclude Include="input\keycodes\sdl1.h" />
+    <ClInclude Include="input\keycodes\sdl2.h" />
+    <ClInclude Include="input\mouse.h" />
+    <ClInclude Include="libraryincludes.h" />
+    <ClInclude Include="network\downloadcontroller.h" />
+    <ClInclude Include="network\networkclient.h" />
+    <ClInclude Include="network\networkcontroller.h" />
+    <ClInclude Include="network\networkhost.h" />
+    <ClInclude Include="pfx.h" />
+    <ClInclude Include="primitives\angle.h" />
+    <ClInclude Include="primitives\ellipses.h" />
+    <ClInclude Include="primitives\line.h" />
+    <ClInclude Include="primitives\point.h" />
+    <ClInclude Include="primitives\polygon.h" />
+    <ClInclude Include="primitives\rect.h" />
+    <ClInclude Include="primitives\shape.h" />
+    <ClInclude Include="primitives\size.h" />
+    <ClInclude Include="scripting\lua\lapi.h" />
+    <ClInclude Include="scripting\lua\lauxlib.h" />
+    <ClInclude Include="scripting\lua\lcode.h" />
+    <ClInclude Include="scripting\lua\lctype.h" />
+    <ClInclude Include="scripting\lua\ldebug.h" />
+    <ClInclude Include="scripting\lua\ldo.h" />
+    <ClInclude Include="scripting\lua\lfunc.h" />
+    <ClInclude Include="scripting\lua\lgc.h" />
+    <ClInclude Include="scripting\lua\llex.h" />
+    <ClInclude Include="scripting\lua\llimits.h" />
+    <ClInclude Include="scripting\lua\lmem.h" />
+    <ClInclude Include="scripting\lua\lobject.h" />
+    <ClInclude Include="scripting\lua\lopcodes.h" />
+    <ClInclude Include="scripting\lua\lparser.h" />
+    <ClInclude Include="scripting\lua\lprefix.h" />
+    <ClInclude Include="scripting\lua\lstate.h" />
+    <ClInclude Include="scripting\lua\lstring.h" />
+    <ClInclude Include="scripting\lua\ltable.h" />
+    <ClInclude Include="scripting\lua\ltm.h" />
+    <ClInclude Include="scripting\lua\lua.h" />
+    <ClInclude Include="scripting\lua\lua.hpp" />
+    <ClInclude Include="scripting\lua\luaconf.h" />
+    <ClInclude Include="scripting\lua\lualib.h" />
+    <ClInclude Include="scripting\lua\lundump.h" />
+    <ClInclude Include="scripting\lua\lvm.h" />
+    <ClInclude Include="scripting\lua\lzio.h" />
+    <ClInclude Include="scripting\scriptcontroller.h" />
+    <ClInclude Include="stages\stage.h" />
+    <ClInclude Include="stages\stagecontroller.h" />
+    <ClInclude Include="text\strings.h" />
+    <ClInclude Include="ui\control.h" />
+    <ClInclude Include="ui\ui.h" />
+    <ClInclude Include="video\animation.h" />
+    <ClInclude Include="video\animation_frame.h" />
+    <ClInclude Include="video\atlas.h" />
+    <ClInclude Include="video\atlas_paletted.h" />
+    <ClInclude Include="video\bitmap.h" />
+    <ClInclude Include="video\bitmap_paletted.h" />
+    <ClInclude Include="video\display.h" />
+    <ClInclude Include="video\font.h" />
+    <ClInclude Include="video\palette.h" />
+    <ClInclude Include="video\plane.h" />
+    <ClInclude Include="video\plane_sprites.h" />
+    <ClInclude Include="video\plane_tilemap.h" />
+    <ClInclude Include="video\plane_tilemap_paletted.h" />
+    <ClInclude Include="video\sprite.h" />
+    <ClInclude Include="video\sprite_animated.h" />
+    <ClInclude Include="video\sprite_text.h" />
+    <ClInclude Include="video\videocontroller.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio\audiocontroller.cpp" />
+    <ClCompile Include="audio\soundfx.cpp" />
+    <ClCompile Include="core\colour.cpp" />
+    <ClCompile Include="core\colourhsl.cpp" />
+    <ClCompile Include="core\configfile.cpp" />
+    <ClCompile Include="core\easing.cpp" />
+    <ClCompile Include="core\memory.cpp" />
+    <ClCompile Include="core\memorystream.cpp" />
+    <ClCompile Include="core\serialiser.cpp" />
+    <ClCompile Include="events\eventcontroller.cpp" />
+    <ClCompile Include="filesys\filesystem.cpp" />
+    <ClCompile Include="input\inputcontroller.cpp" />
+    <ClCompile Include="input\joypad.cpp" />
+    <ClCompile Include="input\keyboard.cpp" />
+    <ClCompile Include="input\mouse.cpp" />
+    <ClCompile Include="network\downloadcontroller.cpp" />
+    <ClCompile Include="network\networkclient.cpp" />
+    <ClCompile Include="network\networkcontroller.cpp" />
+    <ClCompile Include="network\networkhost.cpp" />
+    <ClCompile Include="pfx.cpp" />
+    <ClCompile Include="primitives\polygon.cpp" />
+    <ClCompile Include="scripting\lua\lapi.c" />
+    <ClCompile Include="scripting\lua\lauxlib.c" />
+    <ClCompile Include="scripting\lua\lbaselib.c" />
+    <ClCompile Include="scripting\lua\lbitlib.c" />
+    <ClCompile Include="scripting\lua\lcode.c" />
+    <ClCompile Include="scripting\lua\lcorolib.c" />
+    <ClCompile Include="scripting\lua\lctype.c" />
+    <ClCompile Include="scripting\lua\ldblib.c" />
+    <ClCompile Include="scripting\lua\ldebug.c" />
+    <ClCompile Include="scripting\lua\ldo.c" />
+    <ClCompile Include="scripting\lua\ldump.c" />
+    <ClCompile Include="scripting\lua\lfunc.c" />
+    <ClCompile Include="scripting\lua\lgc.c" />
+    <ClCompile Include="scripting\lua\linit.c" />
+    <ClCompile Include="scripting\lua\liolib.c" />
+    <ClCompile Include="scripting\lua\llex.c" />
+    <ClCompile Include="scripting\lua\lmathlib.c" />
+    <ClCompile Include="scripting\lua\lmem.c" />
+    <ClCompile Include="scripting\lua\loadlib.c" />
+    <ClCompile Include="scripting\lua\lobject.c" />
+    <ClCompile Include="scripting\lua\lopcodes.c" />
+    <ClCompile Include="scripting\lua\loslib.c" />
+    <ClCompile Include="scripting\lua\lparser.c" />
+    <ClCompile Include="scripting\lua\lstate.c" />
+    <ClCompile Include="scripting\lua\lstring.c" />
+    <ClCompile Include="scripting\lua\lstrlib.c" />
+    <ClCompile Include="scripting\lua\ltable.c" />
+    <ClCompile Include="scripting\lua\ltablib.c" />
+    <ClCompile Include="scripting\lua\ltm.c" />
+    <ClCompile Include="scripting\lua\lundump.c" />
+    <ClCompile Include="scripting\lua\lutf8lib.c" />
+    <ClCompile Include="scripting\lua\lvm.c" />
+    <ClCompile Include="scripting\lua\lzio.c" />
+    <ClCompile Include="scripting\scriptcontroller.cpp" />
+    <ClCompile Include="stages\stagecontroller.cpp" />
+    <ClCompile Include="text\strings.cpp" />
+    <ClCompile Include="ui\control.cpp" />
+    <ClCompile Include="ui\ui.cpp" />
+    <ClCompile Include="video\animation.cpp" />
+    <ClCompile Include="video\atlas.cpp" />
+    <ClCompile Include="video\atlas_paletted.cpp" />
+    <ClCompile Include="video\bitmap.cpp" />
+    <ClCompile Include="video\bitmap_paletted.cpp" />
+    <ClCompile Include="video\display.cpp" />
+    <ClCompile Include="video\font.cpp" />
+    <ClCompile Include="video\palette.cpp" />
+    <ClCompile Include="video\plane_sprites.cpp" />
+    <ClCompile Include="video\plane_tilemap.cpp" />
+    <ClCompile Include="video\plane_tilemap_paletted.cpp" />
+    <ClCompile Include="video\sprite.cpp" />
+    <ClCompile Include="video\sprite_animated.cpp" />
+    <ClCompile Include="video\sprite_text.cpp" />
+    <ClCompile Include="video\videocontroller.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BA415B09-401B-4104-985F-A9AA21266EEC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pfx</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Allegro)|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Allegro)|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug  (Allegro)|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release  (Allegro)|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Allegro)|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Libraries\VC\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Libraries\VC\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Allegro)|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Libraries\VC\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Libraries\VC\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Allegro)|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Allegro)|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ALLEGRO;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>allegro.lib;allegro_acodec.lib;allegro_audio.lib;allegro_color.lib;allegro_font.lib;allegro_image.lib;allegro_primitives.lib;allegro_ttf.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <OutputFile>$(SolutionDir)lib\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Allegro)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ALLEGRO;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>allegro.lib;allegro_acodec.lib;allegro_audio.lib;allegro_color.lib;allegro_font.lib;allegro_image.lib;allegro_primitives.lib;allegro_ttf.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <OutputFile>$(SolutionDir)lib\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
