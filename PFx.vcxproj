@@ -95,8 +95,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Allegro)|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(INCLUDE);$(IncludePath)</IncludePath>
-    <LibraryPath>$(LIB);$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Development\pfx\deps\include;$(INCLUDE);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Development\pfx\deps\lib;$(LIB);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (SDL2)|Win32'">
     <LinkIncremental>true</LinkIncremental>
