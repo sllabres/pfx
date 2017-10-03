@@ -5,15 +5,14 @@
 #include "../framework/core/indexsort.h"
 #include "../framework/core/easing.h"
 
-class BootUp : public Stage
+class Game : public Stage
 {
 
-private:
-	Display* display;
+private:	
 	SpritePlane* spritePlane;	
-	Sprite* title;
-	Easing* ease;
-	unsigned char tick;
+	Sprite* background;		
+	TilemapPlane* tileMap;
+	Animation* animation;
 
 public:
 	void LoadResources() override;

@@ -1,11 +1,12 @@
-#include "boot.h"
+#include "title.h"
+#include "game.h"
 
-void BootUp::LoadResources()
+void Title::LoadResources()
 {
 	FX->SetFrameRate(60);
 	FX->SetFrameControl(FrameRateControlMethods::DropFrames);
 	FX->SetApplicationName("Polymath Framework");
-	Size<int> gameresolution(384, 282);
+	Size<int> gameresolution(384, 282);	
 	display = FX->video.CreateDisplay(gameresolution, 0, gameresolution, Point<int>(0, 0));
 	display->SetTitle("Polymath Framework");
 	spritePlane = new SpritePlane(display);
@@ -22,24 +23,24 @@ void BootUp::LoadResources()
 	FX->CreateTimer(0.1);
 }
 
-void BootUp::Start()
+void Title::Start()
 {
 	tick = 0;
 }
 
-void BootUp::Pause()
+void Title::Pause()
 {
 }
 
-void BootUp::Resume()
+void Title::Resume()
 {
 }
 
-void BootUp::Finish()
+void Title::Finish()
 {
 }
 
-void BootUp::EventOccured(Event* What)
+void Title::EventOccured(Event* What)
 {
 	if (What->type == EventTypes::EVENT_TIMER_TICK)
 	{
@@ -48,7 +49,13 @@ void BootUp::EventOccured(Event* What)
 	}
 }
 
-void BootUp::Update()
+void Title::Update()
 {
 	spritePlane->alpha = tick;
+
+	if (FX->input.keyboard.IsKeyDown(KEYCODE_ENTER))
+	{		
+		FX->stages.Current()->Finish();
+		FX->stages.Start(new Game());		
+	}
 }

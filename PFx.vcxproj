@@ -318,7 +318,8 @@
     <ClInclude Include="framework\video\sprite_shape.h" />
     <ClInclude Include="framework\video\sprite_text.h" />
     <ClInclude Include="framework\video\videocontroller.h" />
-    <ClInclude Include="game\boot.h" />
+    <ClInclude Include="game\game.h" />
+    <ClInclude Include="game\title.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework\audio\audiocontroller.cpp" />
@@ -405,7 +406,8 @@
     <ClCompile Include="framework\video\sprite_shape.cpp" />
     <ClCompile Include="framework\video\sprite_text.cpp" />
     <ClCompile Include="framework\video\videocontroller.cpp" />
-    <ClCompile Include="game\boot.cpp" />
+    <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="game\title.cpp" />
     <ClCompile Include="game\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

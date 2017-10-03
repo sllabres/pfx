@@ -1,6 +1,6 @@
 
 #include "../framework/pfx.h"
-#include "boot.h"
+#include "title.h"
 #include <Windows.h>
 
 int main( int argc, char* argv[] )
@@ -8,7 +8,7 @@ int main( int argc, char* argv[] )
 	FreeConsole();
 	PFx* framework = new PFx();
 
-	framework->Execute( new BootUp() );
+	framework->Execute( new Title() );
 
 	return 0;
 }
