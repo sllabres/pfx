@@ -16,9 +16,10 @@ private:
 
 	Animation* standing;
 	Animation* walking;
+	Animation* spinattack;
 	AnimatedSprite* animatedSprite;
-	const int barbarianHeight = 63;
-	const int barbarianWidth = 36;
+	const int barbarianHeight = 67;
+	const int barbarianWidth = 70;
 
 public:
 	void LoadResources() override;
