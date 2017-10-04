@@ -12,7 +12,13 @@ private:
 	SpritePlane* spritePlane;	
 	Sprite* background;		
 	TilemapPlane* tileMap;
-	Animation* animation;
+	Display* display;
+
+	Animation* standing;
+	Animation* walking;
+	AnimatedSprite* animatedSprite;
+	const int barbarianHeight = 63;
+	const int barbarianWidth = 36;
 
 public:
 	void LoadResources() override;

@@ -6,7 +6,7 @@ void Title::LoadResources()
 	FX->SetFrameRate(60);
 	FX->SetFrameControl(FrameRateControlMethods::DropFrames);
 	FX->SetApplicationName("Polymath Framework");
-	Size<int> gameresolution(384, 282);	
+	Size<int> gameresolution(384, 240);	
 	display = FX->video.CreateDisplay(gameresolution, 0, gameresolution, Point<int>(0, 0));
 	display->SetTitle("Polymath Framework");
 	spritePlane = new SpritePlane(display);
@@ -18,8 +18,8 @@ void Title::LoadResources()
 	title->draworigin.y = title->GetDimensions().h / 2;
 	spritePlane->sprites.Add(title);
 	spritePlane->alpha = 0;
-	FX->audio.AddTrack("resources/main_theme.ogg");
-	FX->audio.PlayNextTrack();
+	/*FX->audio.AddTrack("resources/main_theme.ogg");
+	FX->audio.PlayNextTrack();*/
 	FX->CreateTimer(0.1);
 }
 
@@ -37,7 +37,11 @@ void Title::Resume()
 }
 
 void Title::Finish()
-{
+{	
+	FX->PumpEvents();
+	display->planes.Clear();
+	delete title;
+	delete spritePlane;
 }
 
 void Title::EventOccured(Event* What)

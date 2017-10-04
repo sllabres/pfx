@@ -2,37 +2,38 @@
 
 void Game::LoadResources()
 {
-	Display* display = FX->video.GetDisplay(0);
+	display = FX->video.GetDisplay(0);
 	spritePlane = new SpritePlane(display);
 	spritePlane->draworder = SpritePlaneDrawOrder::YPOSITION;
 
-	/*
-	background = new Sprite(new Bitmap("resources/background-main.bmp"));
+	
+	background = new Sprite(new Bitmap("resources/main.bmp"));
 	background->position.x = display->gameresolution.w / 2;
 	background->position.y = display->gameresolution.h / 2;
 	background->draworigin.x = background->GetDimensions().w / 2;
 	background->draworigin.y = background->GetDimensions().h / 2;
-	spritePlane->sprites.Add(background);
-	tileMap = new TilemapPlane(display, tiles, tileSize, mapSize);
-	tileMap->index0isempty = false;
-	tileMap->animations.Add(animation);
-	*/
+	spritePlane->sprites.Add(background);	
 
+	standing = new Animation();
+	standing->frames.Add(new AnimationFrame(0, 30));
+	standing->frames.Add(new AnimationFrame(1, 30));
 
-	Size<int> tileSize(36, 63);
-	Atlas* tiles = new Atlas(new Bitmap("resources/walk.png"), tileSize);	
-	animation = new Animation();	
-	//animation->loopanimation = false;
-	animation->frames.Add(new AnimationFrame(0, 10));
-	animation->frames.Add(new AnimationFrame(1, 10));
-	animation->frames.Add(new AnimationFrame(2, 10));
-	animation->frames.Add(new AnimationFrame(3, 10));			
-	spritePlane->sprites.Add(new AnimatedSprite(tiles, animation));
+	walking = new Animation();
+	walking->frames.Add(new AnimationFrame(2, 15));
+	walking->frames.Add(new AnimationFrame(3, 15));
+	walking->frames.Add(new AnimationFrame(4, 15));	
+
+	Size<int> tileSize(36, 62);
+	Atlas* tiles = new Atlas(new Bitmap("resources/barbarian-tileset.png"), tileSize);
+	animatedSprite = new AnimatedSprite(tiles, standing);
+	animatedSprite->position.y = display->gameresolution.h - barbarianHeight;
+	
+	
 }
 
 void Game::Start()
 {
-
+	spritePlane->sprites.Add(animatedSprite);
 }
 
 void Game::Pause()
@@ -52,5 +53,20 @@ void Game::EventOccured(Event* What)
 }
 
 void Game::Update()
-{
+{	
+		if (FX->input.keyboard.IsKeyDown(KEYCODE_RIGHT)) {
+			animatedSprite->animation = walking;
+			if (animatedSprite->position.x < (display->gameresolution.w - barbarianWidth))
+				animatedSprite->position.x += 1;
+		}
+		else if (FX->input.keyboard.IsKeyDown(KEYCODE_LEFT)) {
+			animatedSprite->animation = walking;
+			if (animatedSprite->position.x > 0)
+				animatedSprite->position.x -= 1;
+		}
+	
+	else {		
+		walking->currentframe = 0;
+		animatedSprite->animation = standing;
+	}
 }
